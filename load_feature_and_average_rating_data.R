@@ -9,8 +9,10 @@ opts_knit$set(fig.width = 3, fig.height = 3)
  
 
 
-Xraw = read_csv("feature_and_average_rating_data.csv.bz2")
-
+Xraw = rbind(
+  read_csv("feature_and_average_rating_data1.csv.bz2"),
+  read_csv("feature_and_average_rating_data2.csv.bz2")
+)
 
 #now we have missing data of which we can do one of two things
 #1) We can drop the row with the missing data (losing n)
